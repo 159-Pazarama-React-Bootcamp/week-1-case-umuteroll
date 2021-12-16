@@ -22,8 +22,8 @@ returnText.innerHTML = startValidation(creditCard);
 }
 
  function isEven(creditCard){
-     //2ye bölümünden kalana bakıyoruz
-    if(Number(creditCard) % 2 != 0){
+     //2ye bölümünden kalana bakıyoruz kart 9 ile başlarsa js number limitine takıldığından sadece son rakama bakıyorum
+    if(Number(creditCard[15]) % 2 != 0){
         return "Girdiğiniz kredi kartının sonu çift değil";
     }
     return calculateCreditCardNumberValue(creditCard);
